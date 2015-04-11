@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'activeadmin',                 github: 'gregbell/active_admin'
+gem 'devise'
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -10,6 +12,7 @@ gem 'sass-rails',                  '~> 4.0.3'
 gem 'slim'
 gem 'spring',                      group: :development
 gem 'unicorn'
+
 
 group :production do
   gem 'uglifier',                  '>= 1.3.0'

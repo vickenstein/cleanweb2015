@@ -1,0 +1,13 @@
+doctype html
+
+html
+  head
+    title = (@title.nil? ? "" : "#{@title} | ") + "RoomBrite"
+    - if mobile_device?
+      meta name="viewport" content="width=320px, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      meta name="apple-mobile-web-app-capable" content="yes"
+    = stylesheet_link_tag 'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body class="#{self.params['controller']}_#{self.params['action']}"
+    = yield

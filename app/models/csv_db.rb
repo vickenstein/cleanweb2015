@@ -6,7 +6,7 @@ class CsvDb
       CSV.parse(csv_file) do |row|
         target_model = model_name.classify.constantize
         new_object = target_model.new
-        column_iterator = -1
+        column_iterator = -2
         target_model.column_names.each do |key|
           column_iterator += 1
           unless key.downcase == "id"

@@ -23,8 +23,8 @@ class Product < ActiveRecord::Base
     energy_cost = wattage * DAILY_LIGHT_USAGE * ELECTRICITY_RATE
     self.energy_cost = energy_cost
 
-    co2_emission = wattage * lifetime * EMISSIONS_FACTOR
-    self.co2_emission = co2_emission / AVG_CAR_CO2_EMISSION_PER_MILE 
+    co2_emission_savings = (wattage_eq - wattage) * lifetime * EMISSIONS_FACTOR
+    self.co2_emissions = co2_emission_savings / AVG_CAR_CO2_EMISSION_PER_MILE 
   end
 
 end

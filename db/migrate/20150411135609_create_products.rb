@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.string :part_number
       t.string :image_url
-      t.string :product_url
+      t.text :product_url
       t.integer :temperature
       t.integer :luminosity
       t.integer :wattage_eq

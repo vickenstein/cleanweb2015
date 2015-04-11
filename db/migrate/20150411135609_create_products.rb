@@ -2,7 +2,7 @@ class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
       t.string :name
-      t.string :sku
+      t.string :part_number
       t.string :image_url
       t.string :product_url
       t.integer :temperature

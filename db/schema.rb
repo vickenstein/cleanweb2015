@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150411141135) do
 
   create_table "products", force: true do |t|
     t.string   "name"
-    t.string   "sku"
+    t.string   "part_number"
     t.string   "image_url"
     t.string   "product_url"
     t.integer  "temperature"

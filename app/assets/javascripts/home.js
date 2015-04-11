@@ -29,29 +29,29 @@ $(function() {
   sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
   sphere_mesh = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) 
 
-  light1 = new THREE.PointLight( 0xFFEE00, 0.5, 100 );
+  light1 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
   light1.position.set(-35, 52, 27);
   perspective.add(light1);
 
 
-  light2 = new THREE.PointLight( 0xFFEEEE, 0.5, 100 );
+  light2 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
   light2.position.set(-35, 52, 4.25);
   perspective.add(light2);
 
-  light3 = new THREE.PointLight( 0xFFEEEE, 0.5, 100 );
+  light3 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
   light3.position.set(-35, 52, -16.5);
   perspective.add(light3);
 
-  light4 = new THREE.PointLight( 0xFFEEEE, 0.5, 100 );
+  light4 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
   light4.position.set(-27, 52, -34);
   perspective.add(light4);
 
-  light5 = new THREE.PointLight( 0xFFEEEE, 0.5, 100 );
+  light5 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
   light5.position.set(1.5, 52, -34);
   perspective.add(light5);
 
-  light5 = new THREE.PointLight( 0xFFEEEE, 0.5, 100 );
-  light5.position.set(30, 52, -34);
+  light6 = new THREE.PointLight( 0xffeecc, 0.5, 100 );
+  light6.position.set(30, 52, -34);
   perspective.add(light5);
 
   loader = new THREE.JSONLoader();
@@ -257,17 +257,35 @@ $(function() {
 
   kalvin_min = 2700;
   kalvin_max = 6500;
+  kalvin_g_m = 17 / (kalvin_max - kalvin_min);
+  kalvin_g_b = 255 - kalvin_g_m * kalvin_max;
+  kalvin_b_m = 41 / (kalvin_max - kalvin_min);
+  kalvin_b_b = 255 - kalvin_b_m * kalvin_max;
 
-  function change_light_hue() {
+  function change_light_hue(average) {
+    var g = kalvin_g_m * average + kalvin_g_b;
+    var b = kalvin_b_m * average + kalvin_b_b;
+    light1.color.g = g / 255;
+    light1.color.b = b / 255;
+    light2.color.g = g / 255;
+    light2.color.b = b / 255;
+    light3.color.g = g / 255;
+    light3.color.b = b / 255;
+    light4.color.g = g / 255;
+    light4.color.b = b / 255;
+    light5.color.g = g / 255;
+    light5.color.b = b / 255; 
+    light6.color.g = g / 255;
+    light6.color.b = b / 255; 
   }
 
   $("#kalvin").slider({
     range: true,
     min: kalvin_min,
     max: kalvin_max,
-    values: [kalvin_min, kalvin_max],
+    values: (kalvin_min + kalvin_max) / 2,
     change: function(event, ui) {
-      var average = (ui.values[0] + ui.values[1]) / 2;
+      var average = ui.value;
       change_light_hue(average);
     }
   });
@@ -291,9 +309,10 @@ $(function() {
     range: true,
     min: luminosity_min,
     max: luminosity_max,
-    values: [luminosity_min, luminosity_max],
+    values: (luminosity_min + luminosity_max) / 2,
     change: function(event, ui) {
-      var average = (ui.values[0] + ui.values[1]) / 2;
+      console.log(ui);
+      var average = ui.value;
       change_light_intensity(average);
     }
   });

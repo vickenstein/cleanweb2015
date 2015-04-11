@@ -18,4 +18,8 @@ test:
 
 production:
   <<: *default
-  database: cleanweb2015_production
+  database: $_ENV['DB_NAME']
+  host: $_ENV['HEROKU_POSTGRESQL_BRONZE_URL']
+  user: $_ENV['DB_USER']
+  password: $_ENV['DB_PASS']
+

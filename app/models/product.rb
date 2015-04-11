@@ -10,6 +10,10 @@ class Product < ActiveRecord::Base
 
   DAILY_LIGHT_USAGE = 2
 
+  EMISSIONS_FACTOR = 0.184
+
+  AVG_CAR_CO2_EMISSION_PER_MILE = 423
+
   # Find lifetime savings of this product comparing to the standard
   # incadecent bulb
   def update_savings
@@ -18,6 +22,9 @@ class Product < ActiveRecord::Base
 
     energy_cost = wattage * DAILY_LIGHT_USAGE * ELECTRICITY_RATE
     self.energy_cost = energy_cost
+
+    co2_emission = wattage * lifetime * EMISSIONS_FACTOR
+    self.co2_emission = co2_emission / AVG_CAR_CO2_EMISSION_PER_MILE 
   end
 
 end

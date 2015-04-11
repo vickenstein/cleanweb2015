@@ -12,6 +12,9 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :wattage
       t.integer :lifetime
       t.integer :type
+      t.float :lifetime_savings
+      t.float :energy_cost
+      t.float :co2_emissions
       t.float :price
 
       t.timestamps

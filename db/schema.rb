@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411141135) do
+ActiveRecord::Schema.define(version: 20150411180354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20150411141135) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "activity_lightings", force: true do |t|
+    t.string   "name"
+    t.integer  "min_fc"
+    t.integer  "max_fc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -61,6 +69,9 @@ ActiveRecord::Schema.define(version: 20150411141135) do
     t.integer  "wattage"
     t.integer  "lifetime"
     t.integer  "type"
+    t.float    "lifetime_savings"
+    t.float    "energy_cost"
+    t.float    "co2_emissions"
     t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"

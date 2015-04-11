@@ -1,0 +1,303 @@
+{
+    "textures": [],
+    "geometries": [{
+        "url": "geometry.Cube.009Geometry.8.json",
+        "uuid": "37D91B5E-6313-4D8F-9921-D52ECE844605",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.012Geometry.8.json",
+        "uuid": "0832B34B-3DD3-46EC-A7B8-F9E0D48860A6",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Plane.003Geometry.8.json",
+        "uuid": "00FB356B-8ED0-4F89-8A35-1CFF649393E6",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.002Geometry.8.json",
+        "uuid": "5FD3BE73-C445-482B-ADF2-AB51F9351BC4",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.007Geometry.8.json",
+        "uuid": "D4CEAA3E-CF9C-46C3-B95A-A61B9E85B25F",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.001Geometry.8.json",
+        "uuid": "66B0A025-50F4-478D-80A7-8BA9C5E1B630",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.000Geometry.8.json",
+        "uuid": "34E1219E-B955-43A4-A52E-A67CEC5153BD",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.013Geometry.8.json",
+        "uuid": "B325BA41-9FFE-4B41-8ACD-C7ED7439274B",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.005Geometry.8.json",
+        "uuid": "2BEBC4A1-4D5C-433A-9111-9E15157DA145",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Plane.004Geometry.8.json",
+        "uuid": "FD3EBD77-E5EB-4FE9-9B3C-560F072F0285",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.003Geometry.8.json",
+        "uuid": "0012BFF4-C7B0-4CC9-AAD6-F4333C4463E6",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.016Geometry.8.json",
+        "uuid": "78E9F6E5-5020-4DD4-A72C-EB80B12454C8",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.008Geometry.8.json",
+        "uuid": "44FAFB1A-E9BA-4D43-94EE-563F679899F5",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.006Geometry.8.json",
+        "uuid": "F7AF175B-3947-4A2E-9468-43AF16CF994B",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Plane.006Geometry.9.json",
+        "uuid": "CC353908-276B-4F09-B1F7-1F32422B9C89",
+        "type": "Geometry"
+    },{
+        "url": "geometry.PlaneGeometry.8.json",
+        "uuid": "938CF6B1-EFC6-4A1A-9760-E9D3C49600A1",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Window.001Geometry.8.json",
+        "uuid": "D962AA5B-7C2E-46B2-90B2-8CA0B4FC0486",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.010Geometry.8.json",
+        "uuid": "23E438CC-D255-46B6-95B1-68C997B6E039",
+        "type": "Geometry"
+    },{
+        "url": "geometry.Cube.011Geometry.8.json",
+        "uuid": "57185933-C35A-43C5-8966-162275F38969",
+        "type": "Geometry"
+    }],
+    "metadata": {
+        "version": 4.3,
+        "sourceFile": "untitled 1.blend",
+        "generator": "io_three",
+        "type": "Object"
+    },
+    "materials": [],
+    "images": [],
+    "object": {
+        "matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+        "children": [{
+            "type": "Mesh",
+            "name": "Cube",
+            "uuid": "5D3FDC3F-A4B8-4449-A491-5351A7C54EB4",
+            "position": [-3.519002676010132,1.7346171140670776,-4.171559810638428],
+            "rotation": [-2.4203436374664307,0.015209978446364403,1.5473533868789673],
+            "scale": [0.26388445496559143,0.49098312854766846,0.4909830093383789],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "0832B34B-3DD3-46EC-A7B8-F9E0D48860A6"
+        },{
+            "type": "Mesh",
+            "name": "Cube.001",
+            "uuid": "5CED4D3A-7D06-4CA0-A9F5-CF3B6FADCBB7",
+            "position": [-1.457032322883606,2.93381404876709,4.288020133972168],
+            "rotation": [-1.5707964897155762,0.0,0.0],
+            "scale": [3.0650720596313477,0.30873438715934753,1.8886337280273438],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "66B0A025-50F4-478D-80A7-8BA9C5E1B630"
+        },{
+            "type": "Mesh",
+            "name": "Cube.002",
+            "uuid": "FBD03DB4-CB4E-4A93-9A1A-64A67269A133",
+            "position": [0.0,2.4433321952819824,8.363170422853727e-08],
+            "rotation": [-1.5707964897155762,0.0,0.0],
+            "scale": [5.973188877105713,4.626833915710449,2.8117244243621826],
+            "visible": true,
+            "castShadow": false,
+            "receiveShadow": false,
+            "geometry": "57185933-C35A-43C5-8966-162275F38969"
+        },{
+            "type": "Mesh",
+            "name": "Cube.003",
+            "uuid": "93C5930A-BE00-491D-B3C2-1DFFCBB9C9B0",
+            "position": [-5.229748249053955,1.7474912405014038,-4.129257678985596],
+            "rotation": [-2.4178876876831055,-0.036612171679735184,-1.5915393829345703],
+            "scale": [0.2928260564804077,0.5448317527770996,0.5448317527770996],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "B325BA41-9FFE-4B41-8ACD-C7ED7439274B"
+        },{
+            "type": "Mesh",
+            "name": "Cube.004",
+            "uuid": "35D979E8-C1C6-4435-85C7-33272A3A41A6",
+            "position": [0.23268504440784454,0.1391356736421585,-3.5986597537994385],
+            "rotation": [-1.570796251296997,0.0,-1.5707874298095703],
+            "scale": [0.07334530353546143,0.07334531098604202,0.1274631768465042],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "34E1219E-B955-43A4-A52E-A67CEC5153BD"
+        },{
+            "type": "Mesh",
+            "name": "Cube.005",
+            "uuid": "6629F80F-1809-4EC5-8B7F-C25EC37FFFA1",
+            "position": [2.5109899044036865,5.252002239227295,-3.360893487930298],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "2BEBC4A1-4D5C-433A-9111-9E15157DA145"
+        },{
+            "type": "Mesh",
+            "name": "Cube.006",
+            "uuid": "E3BD16D4-6F51-4436-81C7-1CB5E5E26159",
+            "position": [-2.622406482696533,5.2566704750061035,-3.360893487930298],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "F7AF175B-3947-4A2E-9468-43AF16CF994B"
+        },{
+            "type": "Mesh",
+            "name": "Cube.007",
+            "uuid": "C3B4D222-779D-412E-8C00-32EB7DA84E64",
+            "position": [-1.5306856632232666,2.9219164848327637,4.329091548919678],
+            "rotation": [1.5707964897155762,3.215549300352588e-13,3.1415886878967285],
+            "scale": [-2.1842570304870605,-0.03218993917107582,-1.1054513454437256],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "78E9F6E5-5020-4DD4-A72C-EB80B12454C8"
+        },{
+            "type": "Mesh",
+            "name": "Cube.008",
+            "uuid": "33870325-8AAD-49C3-9E8D-41EE954772A9",
+            "position": [-3.4403882026672363,5.249302387237549,2.681809186935425],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "D4CEAA3E-CF9C-46C3-B95A-A61B9E85B25F"
+        },{
+            "type": "Mesh",
+            "name": "Cube.009",
+            "uuid": "35E1C43C-4D38-4316-9717-27E22B145ADF",
+            "position": [-3.4403882026672363,5.249302387237549,0.44229450821876526],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "44FAFB1A-E9BA-4D43-94EE-563F679899F5"
+        },{
+            "type": "Mesh",
+            "name": "Cube.010",
+            "uuid": "D54902E4-220E-40AF-8D10-CF3DE1E24BCD",
+            "position": [-3.4403882026672363,5.2604498863220215,-1.6144131422042847],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "37D91B5E-6313-4D8F-9921-D52ECE844605"
+        },{
+            "type": "Mesh",
+            "name": "Cube.011",
+            "uuid": "13A69D33-5AAD-4BC6-8D2C-871ECF5A5F27",
+            "position": [0.22153203189373016,0.3139898478984833,-3.5615599155426025],
+            "rotation": [-1.5707963705062866,0.0,-1.5707963705062866],
+            "scale": [0.9999999403953552,2.7701900005340576,0.04796542599797249],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "5FD3BE73-C445-482B-ADF2-AB51F9351BC4"
+        },{
+            "type": "Mesh",
+            "name": "Cube.012",
+            "uuid": "103ABD55-2404-45FB-B58A-4EF658DD4592",
+            "position": [0.22153200209140778,0.6162683963775635,-3.3123552799224854],
+            "rotation": [-1.570796251296997,0.0,-1.5707874298095703],
+            "scale": [0.7445152997970581,2.6129868030548096,0.2634892463684082],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "0012BFF4-C7B0-4CC9-AAD6-F4333C4463E6"
+        },{
+            "type": "Mesh",
+            "name": "Cube.014",
+            "uuid": "5597EDC2-9989-4FDC-B0CA-833C0486471C",
+            "position": [0.1437234878540039,5.2566704750061035,-3.360893487930298],
+            "rotation": [-1.5707943439483643,3.1415927410125732,0.0],
+            "scale": [-0.17221595346927643,-0.17749330401420593,-0.006254114210605621],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "23E438CC-D255-46B6-95B1-68C997B6E039"
+        },{
+            "type": "Mesh",
+            "name": "Plane",
+            "uuid": "FB199A47-B684-4665-850F-2DF86788B72C",
+            "position": [0.0,0.0,0.0],
+            "rotation": [-1.5707964897155762,0.0,0.0],
+            "scale": [6.04264497756958,4.5791096687316895,4.5791096687316895],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "938CF6B1-EFC6-4A1A-9760-E9D3C49600A1"
+        },{
+            "type": "Mesh",
+            "name": "Plane.002",
+            "uuid": "53125E92-03F6-4342-BA71-BF51B1497388",
+            "position": [-12.07574462890625,2.865455389022827,3.325140953063965],
+            "rotation": [-0.0,1.5707950592041016,3.422848493528363e-08],
+            "scale": [-12.134621620178223,-6.414961338043213,-7.473821640014648],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "FD3EBD77-E5EB-4FE9-9B3C-560F072F0285"
+        },{
+            "type": "Mesh",
+            "name": "Plane.003",
+            "uuid": "0D4BE05F-BA16-4EF2-B5D0-BDB6E0DAC21F",
+            "position": [-6.00388765335083,3.2666385173797607,-0.022560758516192436],
+            "rotation": [-0.0,1.5707954168319702,-1.5707963705062866],
+            "scale": [1.9195107221603394,3.553758144378662,1.0697005987167358],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "00FB356B-8ED0-4F89-8A35-1CFF649393E6"
+        },{
+            "type": "Mesh",
+            "name": "Plane.006",
+            "uuid": "4F023F20-DEB2-4494-AAFC-8BDE6B1128F2",
+            "position": [-1.5381147861480713,3.2014851570129395,4.330419063568115],
+            "rotation": [3.42262609365207e-08,2.872948016374721e-06,-1.5707954168319702],
+            "scale": [0.755285918712616,2.0400216579437256,0.9999999403953552],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "CC353908-276B-4F09-B1F7-1F32422B9C89"
+        },{
+            "type": "Mesh",
+            "name": "Window.001",
+            "uuid": "8969F792-92AF-4196-86F0-B639F02B08A7",
+            "position": [-5.9717254638671875,1.46029794216156,-0.025889627635478973],
+            "rotation": [-1.570796251296997,0.0,1.570796251296997],
+            "scale": [1.6213884353637695,1.0,1.193245768547058],
+            "visible": true,
+            "castShadow": true,
+            "receiveShadow": true,
+            "geometry": "D962AA5B-7C2E-46B2-90B2-8CA0B4FC0486"
+        }],
+        "uuid": "8D2412C0-1E65-406F-AF31-2797725C69F0",
+        "type": "Scene"
+    }
+}

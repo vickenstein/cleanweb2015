@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery-ui
+//= require three.min
+//= require hammer.min
+
+//= require home

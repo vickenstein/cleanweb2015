@@ -16,4 +16,6 @@
 //= require three.min
 //= require hammer.min
 
+//= require hogan.js
+//= require_tree ../../views/templates
 //= require home

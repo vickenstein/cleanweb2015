@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'activeadmin',                 github: 'gregbell/active_admin'
 gem 'devise'
@@ -23,3 +23,5 @@ end
 group :doc do
   gem 'sdoc', '~> 0.4.0',          group: :doc
 end
+
+gem 'hogan_assets'

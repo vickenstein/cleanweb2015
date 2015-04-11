@@ -20,7 +20,7 @@ class Product < ActiveRecord::Base
     lifetime_savings = (wattage_eq - wattage) * lifetime * ELECTRICITY_RATE + (lifetime/INC_LIFETIME * INC_AVG_PRICE)
     self.lifetime_savings = lifetime_savings
 
-    energy_cost = wattage * DAILY_LIGHT_USAGE * ELECTRICITY_RATE
+    energy_cost = wattage * DAILY_LIGHT_USAGE * ELECTRICITY_RATE * 365
     self.energy_cost = energy_cost
 
     co2_emission_savings = (wattage_eq - wattage) * lifetime * EMISSIONS_FACTOR

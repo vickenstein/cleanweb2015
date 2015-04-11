@@ -8,7 +8,5 @@ class CreateActivityLightings < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  def migrate
     
 end

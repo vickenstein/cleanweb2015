@@ -1,11 +1,56 @@
 | {{#products}} 
   <div class="product">
-    <div class="name">{{name}}</div>
-    <div class="price">{{total_cost}}</div>
-    <div class="qty">{{qty}}</div>
-    <a href="{{product_url}}"><img src="{{image_url}}"/></a>
-    <div class="lifetime_savings attribute">{{lifetime_savings}}</div>
-    <div class="co2_savings attribute">{{co2_savings}}</div>
-    <div class="energy_cost attribute">{{energy_cost}}</div>
+    <div class="left">
+      <div class="name">{{name}}</div>
+      <div class="image">
+        <a href="{{product_url}}"><img src="{{image_url}}"/></a>
+      </div>
+    </div>
+    <div class="right">
+      <div  class="price">
+        <div class="info">
+          <div class="fill">
+          </div>
+        </div>
+        <div class="count">
+          {{total_price}}
+        </div>
+      </div>
+      <div class="qty">
+        <div class="info">
+          <div class="fill">
+          </div>
+        </div>
+        <div class="count">
+          {{qty}}
+        </div>
+      <div class="lifetime_savings attribute">
+        <div class="info">
+          <div class="fill">
+          </div>
+        </div>
+        <div class="count">
+          {{lifetime_savings}}
+        </div>
+      </div>
+      <div class="co2_savings attribute">
+        <div class="info">
+          <div class="fill">
+          </div>
+        </div>
+        <div class="count">
+          {{co2_savings}}
+        </div>
+      </div>
+      <div class="energy_cost attribute">
+        <div class="info">
+          <div class="fill">
+          </div>
+        </div>
+        <div class="count">
+          {{energy_cost}}
+        </div>
+      </div>
+    </div>
   </div>
 | {{/products}}

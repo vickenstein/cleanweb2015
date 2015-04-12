@@ -12,13 +12,67 @@
   overflow: hidden;
 }
 
+.panel {
+  position: fixed;
+  height:  25vmin;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  .products {
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space: nowrap;
+    .product {
+      float: left;
+      vertical-align: top;
+      padding: 1vmin;
+      width: 40vmin;
+      height: 23vmin;
+      overflow: hidden;
+      .name {
+        height: 4vmin;
+        width: 14vmin;
+        padding: 0 1vmin;
+        line-height: 4vmin;
+        font-size: 0.6em;
+      }
+      .image {
+        height: 14vmin;
+        width: 14vmin;
+        padding: 1vmin;
+        a {
+          display: block;
+          width: 11vmin;
+          height: 11vmin;
+          -webkit-border-radius: 0.5vmin;
+          -moz-border-radius: 0.5vmin;
+          border-radius: 0.5vmin;
+          border: 1vmin solid #FFC169;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .left, .right {
+        display: inline-block;
+      }
+      .left {
+        width: 16vmin;
+      }
+      .right {
+        width: 24vmin;
+      }
+    }
+  }
+}
 
-.controlls { 
+.controlls {
   position: fixed;
   height: 10vmin;
   width: 100vw;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 25vmin;
+  background-color: rgba(0, 0, 0, 0.4);
   .slider_wrap {
     float: left;
     width: 46vw;
@@ -36,6 +90,9 @@
       }
       .display {
         text-align: center;
+        strong {
+          color: #FFA82C;
+        }
       }
     }
     #kalvin, #luminosity {

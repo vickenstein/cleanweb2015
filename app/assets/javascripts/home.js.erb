@@ -54,7 +54,12 @@ $(function() {
 
   light6 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light6.position.set(30, 50, -34);
-  perspective.add(light5);
+  perspective.add(light6);
+
+  light7 = new THREE.PointLight( 0xffffff, 1, 80 );
+  light7.position.set(-100, 50, 16);
+  perspective.add(light7);
+
 
   loader = new THREE.JSONLoader();
   loader.load("<%= asset_path('furniture.json') %>", function(geometry) {
@@ -197,9 +202,10 @@ $(function() {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var outside = THREE.ImageUtils.loadTexture("<%= asset_path('outside.jpg') %>");
-      var material = new THREE.MeshLambertMaterial({
+      var material = new THREE.MeshPhongMaterial({
         side: THREE.DoubleSide,
         color: 0xFFFFFF,
+        shininess: 5,
         map: outside
       });
       var mesh = new THREE.Mesh(geometry, material);

@@ -5,6 +5,9 @@ function get_products(data, callback) {
     data: data,
     success: function(data) {
       console.log(data);
+      var products = HandlebarsTemplates['products/product']({products: data});
+      console.log(products);
+      $('.products').append(products);
     }
   });
 }

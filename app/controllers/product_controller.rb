@@ -1,11 +1,16 @@
 class ProductController < ApplicationController
 
   def get_products
-    luminosity = params[:luminosity] ? params[:luminosity] * 1.0 : 2000.00
-    temperature = params[:temperature] ? params[:temperature] * 1.0 : 3000.00
-    sq_footage = params[:sq_footage] ? params[:sq_footage] : 120
-    sort_by = params[:sort_by] ? params[:sort_by] : 'price'
+    luminosity = params[:luminosity]
+    temperature = params[:temperature]
+    sq_footage = params[:sq_footage]
+    sort_by = params[:sort_by]
 
+    puts luminosity
+    puts temperature
+    puts sq_footage
+    puts sort_by
+    
     query = "
         select 
           name,

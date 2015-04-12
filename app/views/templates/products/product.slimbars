@@ -3,52 +3,53 @@
     <div class="left">
       <div class="name">{{name}}</div>
       <div class="image">
-        <a href="{{product_url}}"><img src="{{image_url}}"/></a>
+        <a href="{{product_url}}" target='_blank'><img src="{{image_url}}"/>
+        </a>
       </div>
     </div>
     <div class="right">
       <div  class="price">
         <div class="info">
-          <div class="fill">
+          <i class='fa fa-dollar'>
+          </i>
+          <div class="fill" style="height: 0%">
           </div>
         </div>
         <div class="count">
-          {{total_price}}
+          ${{total_price}} / Qty: {{qty}}
         </div>
       </div>
-      <div class="qty">
+      <div class="lifetime_savings">
         <div class="info">
-          <div class="fill">
+          <i class='fa fa-money'>
+          </i>
+          <div class="fill" style="height: {{lifetime_percent}}%">
           </div>
         </div>
         <div class="count">
-          {{qty}}
-        </div>
-      <div class="lifetime_savings attribute">
-        <div class="info">
-          <div class="fill">
-          </div>
-        </div>
-        <div class="count">
-          {{lifetime_savings}}
+          ${{lifetime_savings}}
         </div>
       </div>
-      <div class="co2_savings attribute">
+      <div class="co2_savings">
         <div class="info">
-          <div class="fill">
+          <i class='fa fa-car'>
+          </i>
+          <div class="fill" style="height: {{co2_percent}}%">
           </div>
         </div>
         <div class="count">
-          {{co2_savings}}
+          {{co2_savings}} Miles
         </div>
       </div>
-      <div class="energy_cost attribute">
+      <div class="energy_cost">
         <div class="info">
-          <div class="fill">
+          <i class='fa fa-bolt'>
+          </i>
+          <div class="fill" style="height: {{energy_cost_percent}}%">
           </div>
         </div>
         <div class="count">
-          {{energy_cost}}
+          ${{energy_cost}}
         </div>
       </div>
     </div>

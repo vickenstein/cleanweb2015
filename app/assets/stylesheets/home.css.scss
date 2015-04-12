@@ -20,21 +20,22 @@
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   .products {
-    overflow-x:auto;
-    overflow-y:hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
+    width: 100vw;
     .product {
-      float: left;
+      display: inline-block;
       vertical-align: top;
       padding: 1vmin;
       width: 40vmin;
       height: 23vmin;
       overflow: hidden;
       .name {
+        font-weight: 600;
         height: 4vmin;
         width: 14vmin;
         padding: 0 1vmin;
-        line-height: 4vmin;
         font-size: 0.6em;
       }
       .image {
@@ -49,6 +50,7 @@
           -moz-border-radius: 0.5vmin;
           border-radius: 0.5vmin;
           border: 1vmin solid #FFC169;
+          overflow: hidden;
           img {
             width: 100%;
           }
@@ -62,6 +64,64 @@
       }
       .right {
         width: 24vmin;
+        .price {
+          .fill {
+            background-color: #B2F92B;
+          }
+        }
+        .lifetime_savings {
+          .fill {
+            background-color: #7CBD00;
+          }
+        }
+        .co2_savings {
+          .fill {
+            background-color: #AE30E4;
+          }
+        }
+        .energy_cost {
+          .fill {
+            background-color: #FFC169;
+          }
+        }
+        .price, .lifetime_savings, .co2_savings, .energy_cost {
+          height: 4vmin;
+          font-size: 0.6em;
+          padding: 0.25vmin 0;
+          vertical-align: middle;
+          .info {
+            -webkit-border-radius: 0.5vmin;
+            -moz-border-radius: 0.5vmin;
+            border-radius: 0.5vmin;
+            border: none;
+            overflow: hidden;
+            position: relative;
+            vertical-align: middle;
+            height: 3.5vmin;
+            width: 3.5vmin;
+            padding: 0.25vmin;
+            display: inline-block;
+            border: 1px solid white;
+            i {
+              color: white;
+              text-align: center;
+              width: 100%;
+              line-height: 3.5vmin;
+            }
+            .fill {
+              z-index: -1;
+              position: absolute;
+              bottom: 0;
+              left: -50%;
+              width: 200%;
+            }
+          }
+          .count {
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 1em;
+          }
+        }
       }
     }
   }

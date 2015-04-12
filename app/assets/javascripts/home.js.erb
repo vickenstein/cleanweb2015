@@ -313,7 +313,7 @@ $(function() {
     max: kalvin_max,
     value: (kalvin_min + kalvin_max) / 2,
     change: function(event, ui) {
-      kalvin_display.html("<strong>" + Math.round(ui.value) + "</strong> Lumen")
+      kalvin_display.html("<strong>" + Math.round(ui.value) + "</strong> Kelvin")
       update_products();
     },
     slide: function(event, ui) {

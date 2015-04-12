@@ -15,7 +15,6 @@
 //= require jquery-ui
 //= require three.min
 //= require hammer.min
-
-//= require hogan.js
+//= require handlebars.runtime
 //= require_tree ../../views/templates
 //= require home

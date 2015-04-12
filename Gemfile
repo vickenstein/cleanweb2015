@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 gem 'activeadmin',                 github: 'gregbell/active_admin'
 gem 'devise'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'handlebars_assets'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jbuilder',                    '~> 2.0'
@@ -13,7 +14,6 @@ gem 'slim'
 gem 'spring',                      group: :development
 gem 'unicorn'
 
-
 group :production do
   gem 'uglifier',                  '>= 1.3.0'
   gem 'rails_12factor',            '~> 0.0.2'
@@ -23,5 +23,3 @@ end
 group :doc do
   gem 'sdoc', '~> 0.4.0',          group: :doc
 end
-
-gem 'hogan_assets'

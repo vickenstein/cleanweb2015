@@ -1,0 +1,14 @@
+| {{#products}} 
+  .product
+    .name {{name}}
+    .price {{total_cost}}
+    .qty {{qty}}
+    .a href="{{product_url}}"
+      img src="{{image_url}}"
+    .lifetime_savings.attribute 
+      | {{lifetime_savings}}
+    .co2_savings.attribute
+      | {{co2_savings}}
+    .energy_cost.attribute 
+      | {{energy_cost}}
+| {{/products}}

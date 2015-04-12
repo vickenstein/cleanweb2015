@@ -337,4 +337,5 @@ $(function() {
   });
 
   draw();
+  update_products();
 })

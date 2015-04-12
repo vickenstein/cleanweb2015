@@ -16,7 +16,7 @@
 //= require three.min
 //= require hammer.min
 
-//= require hogan.js
-//= require_tree ./templates
+//= require handlebars.runtime
+//= require_tree ../../views/templates
 //= require home
-//= require product
+

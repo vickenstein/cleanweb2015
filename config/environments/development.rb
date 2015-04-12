@@ -28,6 +28,7 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.assets.paths << Rails.root.join('app', 'assets', 'meshes')
+  config.assets.paths << Rails.root.join('app', 'views', 'templates')
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.

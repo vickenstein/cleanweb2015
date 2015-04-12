@@ -31,28 +31,28 @@ $(function() {
   sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
   sphere_mesh = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) 
 
-  light1 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light1 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light1.position.set(-35, 50, 27);
   perspective.add(light1);
 
 
-  light2 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light2 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light2.position.set(-35, 50, 4.25);
   perspective.add(light2);
 
-  light3 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light3 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light3.position.set(-35, 50, -16.5);
   perspective.add(light3);
 
-  light4 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light4 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light4.position.set(-27, 50, -34);
   perspective.add(light4);
 
-  light5 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light5 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light5.position.set(1.5, 50, -34);
   perspective.add(light5);
 
-  light6 = new THREE.PointLight( 0xfff6ea, 0.5, 100 );
+  light6 = new THREE.PointLight( 0xffedd5, 0.5, 100 );
   light6.position.set(30, 50, -34);
   perspective.add(light5);
 
@@ -277,9 +277,9 @@ $(function() {
 
   kalvin_min = 2700.00;
   kalvin_max = 6500.00;
-  kalvin_g_m = 17 / (kalvin_max - kalvin_min);
+  kalvin_g_m = 34 / (kalvin_max - kalvin_min);
   kalvin_g_b = 255 - kalvin_g_m * kalvin_max;
-  kalvin_b_m = 41 / (kalvin_max - kalvin_min);
+  kalvin_b_m = 82 / (kalvin_max - kalvin_min);
   kalvin_b_b = 255 - kalvin_b_m * kalvin_max;
 
   function change_light_hue(average) {
@@ -299,14 +299,20 @@ $(function() {
     light6.color.b = b / 255; 
   }
 
+  kalvin_display = $(".kalvin_display .display");
+  kalvin_display.html("<strong>" + Math.round((kalvin_min + kalvin_max) / 2) + "</strong> Kelvin")
+
   $("#kalvin").slider({
     min: kalvin_min,
     max: kalvin_max,
     value: (kalvin_min + kalvin_max) / 2,
     change: function(event, ui) {
+      kalvin_display.html("<strong>" + Math.round(ui.value) + "</strong> Kelvin")
+      update_products();
+    },
+    slide: function(event, ui) {
       var average = ui.value;
       change_light_hue(average);
-      update_products();
     }
   });
 
@@ -325,14 +331,21 @@ $(function() {
     light6.intensity = luminosity;
   }
 
+  luminosity_display = $(".luminosity_display .display");
+  luminosity_display.html("<strong>" + Math.round((luminosity_min + luminosity_max) / 2) + "</strong> Kelvin")
+
   luminosity_slider = $("#luminosity").slider({
     min: luminosity_min,
     max: luminosity_max,
     value: (luminosity_min + luminosity_max) / 2,
     change: function(event, ui) {
+      console.log(luminosity_display);
+      luminosity_display.html("<strong>" + Math.round(ui.value) + "</strong> Lumen")      
+      update_products();
+    },
+    slide: function(event, ui) {
       var average = ui.value;
       change_light_intensity(average);
-      update_products();
     }
   });
 

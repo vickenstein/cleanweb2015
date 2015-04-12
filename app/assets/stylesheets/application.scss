@@ -2,7 +2,10 @@ html, body {
   padding: 0;
   margin: 0;
   font-size: 4vmin;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: white;
 }
 
+@import "font";
 @import "home";
 @import "jquery-ui";

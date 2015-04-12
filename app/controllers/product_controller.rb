@@ -18,8 +18,8 @@ class ProductController < ApplicationController
           wattage,
           temperature,
           lifetime_savings,
-          co2_emissions co2_savings,
-          energy_cost,
+          ROUND(co2_emissions::numeric, 2) co2_savings,
+          ROUND(energy_cost::numeric, 2) energy_cost,
           0 max_energy_cost,
           0 max_lifetime,
           0 max_cO2_savings

@@ -14,6 +14,7 @@ class Product < ActiveRecord::Base
 
   AVG_CAR_CO2_EMISSION_PER_MILE = 423
 
+  attr_accessor :max_energy_cost, :max_lifetime, :max_cO2_savings
   # Find lifetime savings of this product comparing to the standard
   # incadecent bulb
   def update_savings

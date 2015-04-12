@@ -5,7 +5,7 @@ class ProductController < ApplicationController
     temperature = params[:temperature] ? params[:temperature] * 1.0 : 3000.00
     sq_footage = params[:sq_footage] ? params[:sq_footage] : 120
     sort_by = params[:sort_by] ? params[:sort_by] : 'price'
-    
+
     query = "
         select 
           name,
@@ -19,7 +19,10 @@ class ProductController < ApplicationController
           temperature,
           lifetime_savings,
           co2_emissions co2_savings,
-          energy_cost
+          energy_cost,
+          0 max_energy_cost,
+          0 max_lifetime,
+          0 max_cO2_savings
         from 
           products
         where 
@@ -38,6 +41,28 @@ class ProductController < ApplicationController
     end
 
     products = Product.find_by_sql(query)
+    max_lifetime = 0
+    max_cO2_savings = 0
+    max_energy_cost = 0
+    products.each do |product|
+      if product.lifetime_savings > max_lifetime
+        max_lifetime = product.lifetime_savings
+      end
+
+      if product.co2_savings > max_cO2_savings
+        max_cO2_savings = product.co2_savings
+      end
+
+      if product.energy_cost > max_energy_cost
+        max_energy_cost = product.energy_cost
+      end
+    end
+
+    products.collect do |p|
+          p.max_energy_cost = max_energy_cost 
+          p.max_lifetime = max_lifetime
+          p.max_cO2_savings = max_cO2_savings
+    end
 
     render json: products
   end

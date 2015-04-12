@@ -13,7 +13,7 @@ class ProductController < ApplicationController
           product_url,
           ceil(#{luminosity}/luminosity) * price total_price,
           price unit_price,
-          ceil(#{luminosity}/luminosity) qty, 
+          cast(ceil(#{luminosity}/luminosity) as integer) qty, 
           luminosity,
           wattage,
           temperature,

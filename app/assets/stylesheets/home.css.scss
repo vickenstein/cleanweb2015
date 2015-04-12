@@ -32,7 +32,7 @@
       height: 23vmin;
       overflow: hidden;
       .name {
-        font-weight: 600;
+        font-weight: 400;
         height: 4vmin;
         width: 14vmin;
         padding: 0 1vmin;
@@ -86,7 +86,7 @@
         }
         .price, .lifetime_savings, .co2_savings, .energy_cost {
           height: 4vmin;
-          font-size: 0.6em;
+          font-size: 0.7em;
           padding: 0.25vmin 0;
           vertical-align: middle;
           .info {
@@ -119,7 +119,7 @@
           .count {
             vertical-align: middle;
             display: inline-block;
-            margin-left: 1em;
+            margin-left: 0.5em;
           }
         }
       }
@@ -152,6 +152,7 @@
         text-align: center;
         strong {
           color: #FFA82C;
+          font-weight: 400;
         }
       }
     }

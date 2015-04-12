@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="lifetime_savings">
-        <div class="info">
+        <div class="info" title="Lifetime savings">
           <i class='fa fa-money'>
           </i>
           <div class="fill" style="height: {{lifetime_percent}}%">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="co2_savings">
-        <div class="info">
+        <div class="info" title="CO2 emissions equivalent of car miles">
           <i class='fa fa-car'>
           </i>
           <div class="fill" style="height: {{co2_percent}}%">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="energy_cost">
-        <div class="info">
+        <div class="info" title="Energy cost per year">
           <i class='fa fa-bolt'>
           </i>
           <div class="fill" style="height: {{energy_cost_percent}}%">

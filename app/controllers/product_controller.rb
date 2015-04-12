@@ -20,9 +20,9 @@ class ProductController < ApplicationController
           lifetime_savings,
           ROUND(co2_emissions::numeric, 2) co2_savings,
           ROUND(energy_cost::numeric, 2) energy_cost,
-          0 max_energy_cost,
-          0 max_lifetime,
-          0 max_cO2_savings
+          0 energy_cost_percent,
+          0 lifetime_percent,
+          0 co2_percent
         from 
           products
         where 
@@ -42,15 +42,15 @@ class ProductController < ApplicationController
 
     products = Product.find_by_sql(query)
     max_lifetime = 0
-    max_cO2_savings = 0
+    max_co2_savings = 0
     max_energy_cost = 0
     products.each do |product|
       if product.lifetime_savings > max_lifetime
         max_lifetime = product.lifetime_savings
       end
 
-      if product.co2_savings > max_cO2_savings
-        max_cO2_savings = product.co2_savings
+      if product.co2_savings > max_co2_savings
+        max_co2_savings = product.co2_savings
       end
 
       if product.energy_cost > max_energy_cost
@@ -59,9 +59,9 @@ class ProductController < ApplicationController
     end
 
     products.collect do |p|
-          p.max_energy_cost = max_energy_cost 
-          p.max_lifetime = max_lifetime
-          p.max_cO2_savings = max_cO2_savings
+          p.energy_cost_percent =(p.energy_cost/max_energy_cost*100).round(2)
+          p.lifetime_percent = (p.lifetime_savings/max_lifetime*100).round(2)
+          p.co2_percent = (p.co2_savings/max_co2_savings*100).round(2)
     end
 
     render json: products

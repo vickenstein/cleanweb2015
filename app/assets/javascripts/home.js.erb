@@ -57,10 +57,10 @@ $(function() {
   perspective.add(light5);
 
   loader = new THREE.JSONLoader();
-  loader.load("assets/furniture.json", function(geometry) {
+  loader.load("<%= asset_path('furniture.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var wood = THREE.ImageUtils.loadTexture('assets/wood.jpeg');
+      var wood = THREE.ImageUtils.loadTexture("<%= asset_path('wood.jpeg') %>");
       wood.wrapS = THREE.RepeatWrapping;
       wood.wrapT = THREE.RepeatWrapping;
       wood.repeat.set( 3, 3 );
@@ -74,10 +74,10 @@ $(function() {
       perspective.add(mesh);
   });
 
-  loader.load("assets/room.json", function(geometry) {
+  loader.load("<%= asset_path('room.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var wall = THREE.ImageUtils.loadTexture('assets/wall.jpg');
+      var wall = THREE.ImageUtils.loadTexture("<%= asset_path('wall.jpg') %>");
       wall.wrapS = THREE.RepeatWrapping;
       wall.wrapT = THREE.RepeatWrapping;
       wall.repeat.set( 25, 25 );
@@ -92,7 +92,7 @@ $(function() {
 
       perspective.add(mesh);
   });
-  loader.load("assets/pillow.json", function(geometry) {
+  loader.load("<%= asset_path('pillow.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshPhongMaterial({
@@ -105,10 +105,10 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/couch.json", function(geometry) {
+  loader.load("<%= asset_path('couch.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var leather = THREE.ImageUtils.loadTexture('assets/leather.jpg');
+      var leather = THREE.ImageUtils.loadTexture("<%= asset_path('leather.jpg') %>");
       leather.wrapS = THREE.RepeatWrapping;
       leather.wrapT = THREE.RepeatWrapping;
       leather.repeat.set( 10, 10 );
@@ -123,7 +123,7 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/couch_leg.json", function(geometry) {
+  loader.load("<%= asset_path('couch_leg.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshLambertMaterial({
@@ -134,10 +134,10 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/floor.json", function(geometry) {
+  loader.load("<%= asset_path('floor.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var floor = THREE.ImageUtils.loadTexture('assets/floor.jpg');
+      var floor = THREE.ImageUtils.loadTexture("<%= asset_path('floor.jpg')%>");
       floor.wrapS = THREE.RepeatWrapping;
       floor.wrapT = THREE.RepeatWrapping;
       floor.repeat.set( 2, 2 );
@@ -151,7 +151,7 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/lights.json", function(geometry) {
+  loader.load("<%= asset_path('lights.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshPhongMaterial({
@@ -166,7 +166,7 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/window.json", function(geometry) {
+  loader.load("<%= asset_path('window.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshPhongMaterial({
@@ -179,7 +179,7 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/window_pane.json", function(geometry) {
+  loader.load("<%= asset_path('window_pane.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshLambertMaterial({
@@ -193,10 +193,10 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/outside.json", function(geometry) {
+  loader.load("<%= asset_path('outside.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var outside = THREE.ImageUtils.loadTexture('assets/outside.jpg');
+      var outside = THREE.ImageUtils.loadTexture("<%= asset_path('outside.jpg') %>");
       var material = new THREE.MeshLambertMaterial({
         side: THREE.DoubleSide,
         color: 0xFFFFFF,
@@ -206,7 +206,7 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/tv.json", function(geometry) {
+  loader.load("<%= asset_path('tv.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
       var material = new THREE.MeshLambertMaterial({
@@ -219,10 +219,10 @@ $(function() {
       mesh.scale.set(10, 10, 10);
       perspective.add(mesh);
   });
-  loader.load("assets/screen.json", function(geometry) {
+  loader.load("<%= asset_path('screen.json') %>", function(geometry) {
       geometry.computeFaceNormals();
       geometry.computeVertexNormals();
-      var logo = THREE.ImageUtils.loadTexture('assets/logo.png');
+      var logo = THREE.ImageUtils.loadTexture("<%= asset_path('logo.png') %>");
       var material = new THREE.MeshLambertMaterial({
         side: THREE.DoubleSide,
         color: 0xFFFFFF,

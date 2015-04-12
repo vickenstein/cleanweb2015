@@ -17,5 +17,6 @@
 //= require hammer.min
 
 //= require hogan.js
-//= require_tree ../../views/templates
+//= require_tree ./templates
 //= require home
+//= require product

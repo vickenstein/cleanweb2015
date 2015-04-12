@@ -275,8 +275,8 @@ $(function() {
     lastPanY = event.deltaY;
   });
 
-  kalvin_min = 2700;
-  kalvin_max = 6500;
+  kalvin_min = 2700.00;
+  kalvin_max = 6500.00;
   kalvin_g_m = 17 / (kalvin_max - kalvin_min);
   kalvin_g_b = 255 - kalvin_g_m * kalvin_max;
   kalvin_b_m = 41 / (kalvin_max - kalvin_min);
@@ -306,11 +306,12 @@ $(function() {
     change: function(event, ui) {
       var average = ui.value;
       change_light_hue(average);
+      update_products();
     }
   });
 
-  luminosity_min = 270;
-  luminosity_max = 2800;
+  luminosity_min = 270.00;
+  luminosity_max = 2800.00;
   luminosity_m = 0.9 / (luminosity_max - luminosity_min);
   luminosity_b = 1 - luminosity_m * luminosity_max;
 
@@ -329,9 +330,9 @@ $(function() {
     max: luminosity_max,
     value: (luminosity_min + luminosity_max) / 2,
     change: function(event, ui) {
-      console.log(ui);
       var average = ui.value;
       change_light_intensity(average);
+      update_products();
     }
   });
 
